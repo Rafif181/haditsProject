@@ -1,2 +1,2 @@
 # haditsProject
-Final Project for Multimedia Technology
+Final Project for Multimedia Technology Course
