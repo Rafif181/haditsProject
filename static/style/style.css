@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 18px;
+  color: #000000;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+img {
+  max-width: 90%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+p {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.bg {
+  background-color: #fff5e0;
+  background-image: url("../Liquid Bg 1.png"), url("../Liquid Bg 2.png");
+  background-position: 100% 150px, -20% -300px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 220%;
+}
+.logo {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  padding: 15px;
+  font-size: 24px;
+  color: #000000;
+}
+.container {
+  margin: 0;
+  padding: 1% 10%;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10%;
+}
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  color: #44c37e;
+  margin-bottom: 10px;
+}
+.salah {
+  color: #ff6e6e;
+}
+.home-container {
+  padding-right: 12%;
+}
+.box {
+  align-items: center;
+}
+.btn {
+  text-align: center;
+}
+.illustration {
+  margin-top: 12%;
+}
+.btn-mulai,
+.btn-lanjut,
+.btn-hasil {
+  margin-top: 20px;
+  border-width: 0px;
+  background: linear-gradient(74deg, #33935f 0%, #44c37e 80.85%);
+  box-shadow: 13.9703px -4.00593px 29.0667px rgba(68, 195, 126, 0.247),
+    inset -4.40842px 1.26409px 4.58607px #33935f,
+    inset 4.40842px -1.26409px 4.58607px #44c37e;
+  border-radius: 60px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 600;
+  line-height: 38px;
+  color: #fff5e0;
+  transition: all 0.2s;
+}
+.btn-lanjut,
+.btn-hasil {
+  margin: auto;
+  display: block;
+  padding: 8px 8px;
+  font-size: 18px;
+}
+.btn-mulai {
+  width: 180px;
+  padding: 10px 8px;
+  font-size: 20px;
+}
+.btn-lanjut {
+  width: 150px;
+}
+.btn-hasil {
+  width: 100%;
+}
+.btn-mulai:hover,
+.btn-lanjut:hover,
+.btn-hasil:hover {
+  cursor: pointer;
+  background: linear-gradient(74deg, #ccb992 0%, #fff5e0 80.85%);
+  box-shadow: 13.9703px -4.00593px 29.0667px rgba(255, 245, 224, 0.247),
+    inset -4.40842px 1.26409px 4.58607px #ead6ae,
+    inset 4.40842px -1.26409px 4.58607px #fff5e0;
+  color: #33935f;
+  transition: 0.2s;
+}
+.opt-container {
+  margin: 0;
+  padding: 0;
+}
+.btn-hadits:checked,
+.btn-hadits:not(:checked) {
+  position: relative;
+  display: block;
+  align-items: center;
+  padding: 15px 20px;
+  width: 100%;
+  overflow: hidden;
+  border-width: 0px;
+  border-radius: 15px;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 20px;
+  color: #000000;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.btn-hadits:not(:checked) {
+  background: linear-gradient(74deg, #ececec 0%, #ffffff 80.85%);
+  box-shadow: 2px -2px 4px rgba(0, 0, 0, 0.25),
+    inset -2.41px 1.26409px 4.58607px #dbdbdb,
+    inset 2.41px -1.26409px 4.58607px #ffffff;
+}
+.btn-hadits:checked {
+  transition: 0.5s;
+  background: linear-gradient(74deg, #e2e2e2 0%, #fafafa 80.85%);
+  box-shadow: inset -2.41px 1.26409px 4.58607px #e7e1e1,
+    inset 2.41px -1.26409px 4.58607px #cbcbcb;
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.btn-record {
+  position: relative;
+  display: block;
+  align-items: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-width: 0px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(../Record.png);
+  background-position: center;
+  border-radius: 100%;
+  box-shadow: -4px 8px 3px rgba(0, 0, 0, 0.25);
+  width: 100px;
+  height: 100px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.btn-record:active {
+  box-shadow: none;
+}
+
+.btn-stop {
+  position: relative;
+  display: block;
+  align-items: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-width: 0px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: red;
+  background-position: center;
+  border-radius: 100%;
+  box-shadow: -4px 8px 3px rgba(0, 0, 0, 0.25);
+  width: 100px;
+  height: 100px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+  float: left;
+  padding: 15px;
+}
+@media only screen and (min-width: 768px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+  html {
+    font-size: 20px;
+  }
+  img {
+    float: right;
+  }
+  .bg {
+    background-position: 110% 150px, -20% -600px;
+    background-size: 200%;
+  }
+  .container {
+    padding: 50px 7%;
+    padding-bottom: 10%;
+  }
+  .home-container {
+    padding-right: 3%;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .box {
+    display: flex;
+  }
+  .title,
+  .btn,
+  p {
+    text-align: left;
+  }
+  .illustration {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  html {
+    font-size: 20px;
+  }
+  img {
+    float: right;
+  }
+  .bg {
+    background-position: 300% -50px, -500% -500px;
+    background-size: 110%;
+  }
+  .container {
+    padding: 50px 10%;
+    padding-bottom: 10%;
+  }
+  .home-container {
+    padding-right: 10%;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .box {
+    display: flex;
+  }
+  .title,
+  .btn,
+  p {
+    text-align: left;
+  }
+  .illustration {
+    margin-top: 0px;
+  }
+  .btn-hasil {
+    width: 90%;
+  }
+}

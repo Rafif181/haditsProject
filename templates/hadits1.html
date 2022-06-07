@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hadits 1 | Hadits</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/style.css') }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg">
+    <a href="{{ url_for('index') }}" class="logo">Hadits.</a>
+    <div class="container">
+      <div class="col-12 col-s-12" style="text-align: center">
+        <div class="title" style="text-align: center">
+          Silakan rekam suara Anda
+        </div>
+        <p style="text-align: center">Hadits 1</p>
+        <p style="text-align: center">
+          Mempertahankan Aqidah Sampai Akhir Hayat
+        </p>
+        <select id="encodingTypeSelect">
+          <option value="wav">Waveform Audio (.wav)</option>
+        </select>
+      </div>
+      <div class="col-6 col-s-12 opt-container">
+        <button class="btn-record" id="recordButton"></button>
+        <p style="text-align: center">Record</p>
+      </div>
+      <div class="col-6 col-s-12 opt-container">
+        <button class="btn-stop" id="stopButton"></button>
+        <p style="text-align: center">Stop</p>
+      </div>
+      <div class="col-6 col-s-12 opt-container" style="text-align: center">
+        <div id="formats"></div>
+        <pre>Log</pre>
+        <pre id="log"></pre>
+      </div>
+      <div class="col-12 col-s-12">
+        <p style="text-align: center">Unduh hadits yang anda rekam</p>
+        <ol id="recordingList"></ol>
+      </div>
+      <div class="col-12 col-s-12" style="text-align: center">
+        <p style="text-align: center">Upload rekaman hadits anda</p>
+
+        <form method="post" enctype="multipart/form-data">
+          <input type="file" name="file" />
+          <br />
+
+          <br />
+          <p style="text-align: center">Cek Haditsnya</p>
+          <input
+            type="submit"
+            id="submitButton"
+            value="Cek"
+            class="btn-lanjut"
+          />
+        </form>
+      </div>
+      <div class="col-12 col-s-12" style="text-align: center">
+        {% if transcript != "" %}
+        <div id="speechTranscriptContainer">
+          <p style="text-align: center">Hasil</p>
+          <p id="speechText" style="text-align: center">{{ transcript }}</p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/WebAudioRecorder.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>

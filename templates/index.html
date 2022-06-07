@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Hadits</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/style.css') }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg">
+    <a href="{{ url_for('index') }}" class="logo">Hadits.</a>
+    <!-- <div class="logo">Hadits.</div> -->
+    <div class="container box">
+      <div class="col-6 col-s-6 home-container">
+        <div class="title">Pengoreksi Hafalan Hadits Arbain Tarbawiyah</div>
+        <p>Kami mengoreksi hafalan hadits secara langsung dari suara Anda</p>
+        <div class="btn">
+          <a href="{{ url_for('pilihadits') }}">
+            <button class="btn-mulai">MULAI</button>
+          </a>
+        </div>
+      </div>
+      <div class="col-6 col-s-6 illustration">
+        <img src="{{ url_for('static', filename='Illustration.png') }}" />
+      </div>
+    </div>
+  </body>
+</html>

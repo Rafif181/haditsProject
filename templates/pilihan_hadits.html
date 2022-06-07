@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Opsi Hadits | Hadits</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/style.css') }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg">
+    <a href="{{ url_for('index') }}" class="logo">Hadits.</a>
+    <div class="container">
+      <div class="col-12 col-s-12" style="text-align: center">
+        <div class="title" style="text-align: center">Silakan pilih hadits</div>
+      </div>
+      <div class="col-12 col-s-12 opt-container">
+        <div class="btn">
+          <a href="{{ url_for('hadits1') }}"">
+            <button class="btn-hadits">Hadits 1</button>
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-s-12 opt-container">
+        <div class="btn">
+          <a href="{{ url_for('hadits9') }}">
+            <button class="btn-hadits">Hadits 9</button>
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-s-12 opt-container">
+        <div class="btn">
+          <a href="{{ url_for('hadits10') }}">
+            <button class="btn-hadits">Hadits 10</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="func.js"></script>
+  </body>
+</html>
